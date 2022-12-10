@@ -46,10 +46,8 @@ public class Day10 {
                 if(screen.get(SCREENHEIGHT).size() >= x - 1 && screen.get(SCREENHEIGHT).size() <= x + 1){
                     screen.get(SCREENHEIGHT).add("#");
                 } else{
-                    screen.get(SCREENHEIGHT).add(".");
+                    screen.get(SCREENHEIGHT).add(" ");
                 }
-                System.out.println("Cycle: " + cycle);
-                System.out.println("Row: " + screen.get(SCREENHEIGHT));
                 cycle++;
                 if(cycle % 40 == 0){
                     screen.add(new ArrayList<>());
@@ -59,10 +57,8 @@ public class Day10 {
             if(screen.get(SCREENHEIGHT).size() >= x - 1 && screen.get(SCREENHEIGHT).size() <= x + 1){
                 screen.get(SCREENHEIGHT).add("#");
             } else{
-                screen.get(SCREENHEIGHT).add(".");
+                screen.get(SCREENHEIGHT).add(" ");
             }
-            System.out.println("Cycle: " + cycle);
-            System.out.println("Row: " + screen.get(SCREENHEIGHT));
 
 
             if(commandWords[0].equals("addx")){
