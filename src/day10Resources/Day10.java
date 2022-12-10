@@ -30,4 +30,60 @@ public class Day10 {
         }
         System.out.println(totalSignal);
     }
+    public static void d10Part2(List<String> commands){
+        int x = 1;
+        int cycle = 0;
+        List<List<String>> screen = new ArrayList<>();
+        screen.add(new ArrayList<>());
+
+        for(String command: commands){
+
+
+            String[] commandWords = command.split(" ");
+            if(commandWords[0].equals("addx")){
+                final int SCREENHEIGHT = screen.size() - 1;
+
+                if(screen.get(SCREENHEIGHT).size() >= x - 1 && screen.get(SCREENHEIGHT).size() <= x + 1){
+                    screen.get(SCREENHEIGHT).add("#");
+                } else{
+                    screen.get(SCREENHEIGHT).add(".");
+                }
+                System.out.println("Cycle: " + cycle);
+                System.out.println("Row: " + screen.get(SCREENHEIGHT));
+                cycle++;
+                if(cycle % 40 == 0){
+                    screen.add(new ArrayList<>());
+                }
+            }
+            final int SCREENHEIGHT = screen.size() - 1;
+            if(screen.get(SCREENHEIGHT).size() >= x - 1 && screen.get(SCREENHEIGHT).size() <= x + 1){
+                screen.get(SCREENHEIGHT).add("#");
+            } else{
+                screen.get(SCREENHEIGHT).add(".");
+            }
+            System.out.println("Cycle: " + cycle);
+            System.out.println("Row: " + screen.get(SCREENHEIGHT));
+
+
+            if(commandWords[0].equals("addx")){
+
+                x += Integer.parseInt(commandWords[1]);
+            }
+            cycle++;
+            if(cycle % 40 == 0){
+                screen.add(new ArrayList<>());
+            }
+
+
+
+
+        }
+        System.out.println("\n\n");
+        for(List<String> row: screen){
+            for(String pix: row){
+                System.out.print(pix);
+            }
+            System.out.println();
+        }
+    }
 }

@@ -66,8 +66,8 @@ public class Main {
 
         System.out.println("DAY 10");
         input = Files.readAllLines(Paths.get("src/day10Resources/Day10"));
-        d10Part1(input);
-        //d10Part2(input);
+        //d10Part1(input);
+        d10Part2(input);
     }
 
 
