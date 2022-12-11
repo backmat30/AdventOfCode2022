@@ -13,6 +13,7 @@ import static day7Resources.Day7.*;
 import static day8Resources.Day8.*;
 import static day9Resources.Day9.*;
 import static day10Resources.Day10.*;
+import static day11Resources.Day11.*;
 
 public class Main {
     public static void main(String[] args) throws IOException{
@@ -64,10 +65,15 @@ public class Main {
 //        d9Part1(input);
 //        d9Part2(input);
 
-        System.out.println("DAY 10");
-        input = Files.readAllLines(Paths.get("src/day10Resources/Day10"));
-        d10Part1(input);
-        d10Part2(input);
+//        System.out.println("DAY 10");
+//        input = Files.readAllLines(Paths.get("src/day10Resources/Day10"));
+//        d10Part1(input);
+//        d10Part2(input);
+
+        System.out.println("DAY 11");
+        input = Files.readAllLines(Paths.get("src/day11Resources/Day11"));
+        d11Part1(input);
+        d11Part2(input);
     }
 
 
