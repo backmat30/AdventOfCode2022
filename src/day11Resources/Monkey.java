@@ -30,6 +30,10 @@ public class Monkey {
         items.add(item);
     }
 
+    public void removeItem(int item){
+        items.remove(items.indexOf(item));
+    }
+
     public String getOperation() {
         return operation;
     }
