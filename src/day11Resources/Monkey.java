@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Monkey {
-    private List<Integer> items = new ArrayList<>();
+    private List<Long> items = new ArrayList<>();
     private String operation;
     private int testCase;
     private int trueMonkey;
     private int falseMonkey;
 
-    public Monkey(List<Integer> items, String operation, int testCase, int trueMonkey, int falseMonkey){
+    public Monkey(List<Long> items, String operation, int testCase, int trueMonkey, int falseMonkey){
         this.items = items;
         this.operation = operation;
         this.testCase = testCase;
@@ -18,15 +18,15 @@ public class Monkey {
         this.falseMonkey = falseMonkey;
     }
 
-    public List<Integer> getItems() {
+    public List<Long> getItems() {
         return items;
     }
 
-    public void setItems(List<Integer> items){
+    public void setItems(List<Long> items){
         this.items = items;
     }
 
-    public void addItem(int item){
+    public void addItem(long item){
         items.add(item);
     }
 
